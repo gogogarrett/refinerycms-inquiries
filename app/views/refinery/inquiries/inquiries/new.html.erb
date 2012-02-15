@@ -1,6 +1,6 @@
 <% content_for :body_content_left do %>
   <div class='inquiries'>
-    <%=raw @page.content_for(default_parts_for(::Refinery::Pages.first.to_sym)) %>
+    <%=raw @page.content_for(default_parts_for(::Refinery::Pages.config.first.to_sym)) %>
 
     <%= form_for [refinery, :inquiries, @inquiry] do |f| %>
       <%= render :partial => "/refinery/admin/error_messages",
